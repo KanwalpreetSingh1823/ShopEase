@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: rgb(218, 218, 219);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin:15vh 25vw 20vh 25vw;
+    padding:10px;
+    height:72vh;
+    padding-bottom: 0;
+}
+.login{
+    background-color: white;
+    width:30vw;
+    border-radius: 10px;
+}
+.login #sign-in{
+    text-align: center;
+    margin-top: 16px;
+  font-family: "Wittgenstein", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.loginField{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:0.1rem;
+}
+fieldset{
+    height:8vh;
+    width:15vw;
+    border-color: white;
+}
+fieldset legend{
+    font-size: 17px;
+    margin-left: 5px;
+}
+fieldset input{
+    width: 25vw;
+    margin-left: 10px;
+    margin-top: 2px;
+    height:3vh;
+    border: none;
+    outline:none;
+    font-size:1rem;
+}
+#submit-button{
+    width:10rem;
+    height:2.5rem;
+    border:none;
+    border-radius: 10px;
+    border-color: white;
+    background-color: red;
+    opacity: 0.9;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.hr-container {
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+}
+.hr-container hr {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid rgb(173, 172, 172);
+    margin:0 10px 0 10px;
+} 
+.hr-container span{
+    padding:0 1px;
+}
+.login-Option{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:6rem;
+    font-size: 2rem;
+    color:black;
+    opacity: 0.6;
+}
+.loader{
+    display: none;
+    position: fixed;
+    top:40vh;
+    left:45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader .spin{
+    border-top:2px solid red;
+    display: none;
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    animation-name: load;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-duration: 500ms;
+}
+@keyframes load {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
