@@ -1,21 +1,30 @@
 const body = document.querySelector("body");
 const userName = document.querySelector("#Username");  //here only the element is accessible
-const subBtn = document.querySelector("#submit-button");
-const userValid = document.querySelector(".userValidate");
-const passValid = document.querySelector(".pwdValidate");
+const pwd = document.querySelector("#Password");
+const userNameError = document.querySelector("#usernameError");
+const pwdError = document.querySelector("#pwdError");
+const Form = document.querySelector("#form");
 
-userValid.classList.remove("display1");
-passValid.classList.remove("display2");
-subBtn.addEventListener("click",()=>{
+Form.addEventListener("submit",(event)=>{
     const userLength = userName.value.length;
-    const pwdLength = passValid.value.length;
-    const validUser = usesrLength>=5 && userLength<=20;
+    const validUser = userLength>=5 && userLength<=20;
+    const pwdLength = pwd.value.length;
     const validPwd = pwdLength>=8 && pwdLength<=20;
+    const isValid = true;
+
+    userNameError.innerHTML = "";
+    pwdError.innerHTML = ""
+    
     if(!validUser){
-        userValid.classList.add("display1");
+        userNameError.innerHTML = "username should be of atleast 5 characters";
+        isValid = false;
     }
     if(!validPwd){
-        passValid.classList.add("display2");
+        pwdError.innerHTML = "password should be of atleast 8 characters";
+        isValid = false;
+    }
+    if(!isValid){
+        event.preventDefault();
     }
     else{
         showLoader();

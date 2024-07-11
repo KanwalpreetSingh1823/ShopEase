@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <form onsubmit="event.preventDefault();">
+    <form onsubmit="event.preventDefault();" id="form">
         <div class="container">
             <div class="login">
                 <h1 id="sign-in">Sign In</h1>
@@ -19,18 +19,20 @@
                     <fieldset>
                         <legend>Username</legend>
                         <input type="text" id="Username" required>
+                        <p id="usernameError" class="error"></p>
                     </fieldset>
-                    <p class="userValidate display1">username should be of atleast 5 characters</p>
+                    
                     <fieldset>
                         <legend>Password</legend>
                         <input type="password" id="Password" required>
+                        <p id="pwdError" class="error"></p>
                     </fieldset>
-                    <p class="userValidate display2">password should be of atleast 8 characters</p>
+
                     <fieldset>
                         <legend>Email</legend>
                         <input type="email" id="Email" required>
                     </fieldset>
-                    <!-- <p class="userValidate display">Valid User</p> -->
+                    
                     <button id="submit-button">Submit</button>
                 </div>
                 <div class="hr-container">

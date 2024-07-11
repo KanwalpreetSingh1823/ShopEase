@@ -7,22 +7,24 @@ body{
 }
 .container{
     display: flex;
+    /* border:1px solid black; */
     justify-content: center;
     margin:15vh 25vw 20vh 25vw;
     padding:10px;
-    height:72vh;
+    height:30rem;
     padding-bottom: 0;
 }
 .login{
     background-color: white;
-    width:30vw;
+    border:1px solid red;
+    width:25rem;
     border-radius: 10px;
 }
 .login #sign-in{
     text-align: center;
     margin-top: 16px;
-  font-family: "Wittgenstein", serif;
-  font-optical-sizing: auto;
+    font-family: "Wittgenstein", serif;
+    font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
@@ -32,11 +34,11 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap:15px;
+    gap:30px;
 }
 fieldset{
-    height:8vh;
-    width:15vw;
+    height:3rem;
+    width:10rem;
     border-color: white;
 }
 fieldset legend{
@@ -119,15 +121,21 @@ fieldset input{
 
 /*--------------Login Validation------------*/
 
-.userValidate{
-    display: none;
+.error{
     font-size: 0.9rem;
     color:red;
     margin-left: 7vw;
+    margin-top: 8px;
 }
-.display1{
-    display:block;
+/* .pwdValidate{
+    font-size: 0.9rem;
+    color:red;
+    margin-left: 7vw;
+    margin-top: 10px;
+} */
+/* .display1{
+    display:none;
 }
 .display2{
-    display:block;
-}
+    display:none;
+} */
