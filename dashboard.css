@@ -1,0 +1,69 @@
+*{
+    margin:0;
+    padding:0;
+}
+.navbar{
+    background-color: black;
+    display: flex;
+    height:2.5rem;
+    position: fixed;
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:azure;
+    margin-left:2rem;
+    width:30rem;
+}
+.items li{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    font-size: 1rem;
+    color:azure;
+}
+a{
+    text-decoration: none;
+}
+.search-bar{
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+#search{
+    width:25rem;
+    height:1.7rem;
+}
+.userDetails{
+    width:16rem;
+    display: flex;
+    align-items: center;
+}
+#user-info i{
+    color:azure;
+    padding-left: 8rem;
+    font-size: 1.4rem;
+}
+.search-bar i{
+    color:azure;
+    margin-right: 3.1rem;
+}
+#logo{
+    color:azure;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    margin-left: 0.5rem;
+    line-height: 2.2rem;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2.5rem;
+}
+.cart #cart-add{
+    color:azure;
+    font-size: 1.2rem;
+}
