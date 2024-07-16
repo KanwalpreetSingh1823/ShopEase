@@ -9,26 +9,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="main-logo">
-            <a href="dashboard.html" id="logo">ShopEase</a>
+    <div class="navBar">
+        <nav class="navbar">
+            <div class="main-logo">
+                <a href="dashboard.html" id="logo">ShopEase</a>
+            </div>
+            <ul class="items">
+                <a href="#"><li>Men</li></a>
+                <a href="#"><li>Women</li></a>
+                <a href="#"><li>Electronics</li></a>
+                <a href="#"><li>Home & garden</li></a>
+            </ul>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search...">
+               <!-- <span> <i class="fa-solid fa-magnifying-glass"></i></span> -->
+            </div>
+            <div class="cart">
+                <a href="#" id="cart-add"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <div class="userDetails">
+                <a href="#" id="user-info"><i class="fa-solid fa-user"></i></a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="product-slides">
+        <div class="text-write"><h1 class="main-head">Welcome to ShopEase </h1><br>
+            Discover a World of Quality and Style at ShopEase. <br><br>
+            We believe in offering only the best to our customers. Explore our wide range of products that cater to all your needs, from the latest fashion trends to top-notch electronics, home essentials, and more. Our curated collection is designed to bring you exceptional quality, great value, and an unmatched shopping experience.</div>
+        <div class="slides">
+            <div class="mySlides">
+                <img src="pic1.jpg" class = "display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic2.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic3.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic5.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic6.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic7.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic8.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic9.jpg" class="display-image" alt="product">
+            </div>
+            <div class="mySlides">
+                <img src="pic10.jpg" class="display-image" alt="product">
+            </div>
         </div>
-        <ul class="items">
-            <a href="#"><li>Men</li></a>
-            <a href="#"><li>Women</li></a>
-            <a href="#"><li>Electronics</li></a>
-            <a href="#"><li>Home & garden</li></a>
-        </ul>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search...">
-           <!-- <span> <i class="fa-solid fa-magnifying-glass"></i></span> -->
-        </div>
-        <div class="cart">
-            <a href="#" id="cart-add"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="userDetails">
-            <a href="#" id="user-info"><i class="fa-solid fa-user"></i></a>
-        </div>
-    </nav>
+    </div>
+    <script src="dashboard.js"></script>
 </body>
 </html>

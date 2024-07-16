@@ -6,7 +6,7 @@
     background-color: black;
     display: flex;
     height:2.5rem;
-    position: fixed;
+    position:fixed;
 }
 .items{
     display: flex;
@@ -66,4 +66,51 @@ a{
 .cart #cart-add{
     color:azure;
     font-size: 1.2rem;
+}
+.product-slides{
+    /* background-color:rgb(236, 236, 236); */
+    /* border:1px solid green; */
+    display: flex;
+    align-items: center;
+    height:25rem;
+    gap:17rem;
+    /* background-color:black; */
+}
+/* .slide-1 img{
+    width:100rem;
+}
+.slide-2 img{
+    width:100rem;
+    height:26.5rem;
+} */
+.fade{
+    display: none;
+}
+.mySlides{
+    display: flex;
+    margin-top: 4rem;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.display-image{
+    height:300px;
+    width:300px;
+}
+.text-write{
+    width: 35rem;
+    /* border: 1px solid black; */
+}
+.slides{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:25rem;
+    /* border:1px solid red; */
+}
+
+
+.main-head{
+    color:black;
+    opacity: 0.8;
 }
