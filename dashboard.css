@@ -74,6 +74,7 @@ a{
     align-items: center;
     height:25rem;
     gap:17rem;
+    /* flex-shrink: 2; */
     /* background-color:black; */
 }
 /* .slide-1 img{
@@ -98,8 +99,10 @@ a{
     width:300px;
 }
 .text-write{
+    margin-left: 1rem;
     width: 35rem;
-    /* border: 1px solid black; */
+    /* border: 1px solid black;
+    flex-wrap: nowrap; */
 }
 .slides{
     display: flex;
@@ -113,4 +116,25 @@ a{
 .main-head{
     color:black;
     opacity: 0.8;
+}
+
+.cloth-section{
+    margin-top: 1rem;
+    /* border:1px solid black; */
+    display: flex;
+    justify-content: center;
+    gap:3rem;
+    padding: 0 1rem 0 1rem;
+    flex-wrap: wrap;
+}
+.cloth-section .item{
+    /* border:1px solid red; */
+    height:25rem;
+    width:16rem;
+    overflow: hidden;
+    box-shadow:5px 5px 5px grey;
+}
+.cloth-section .product{
+    height:15rem;
+    width:16rem;
 }

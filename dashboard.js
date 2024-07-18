@@ -16,16 +16,61 @@ function showSlides() {
 
 document.addEventListener("DOMContentLoaded",()=>{
     let head = document.querySelector(".main-head");
+    let head2 = document.querySelector("#discover");
     let text = head.textContent;
+    let text2 = head2.innerHTML;
     head.innerHTML = "";
+    head2.innerHTML = "";
 
     let i = 0;
-    function autoType(){
+    let j = 0;
+    function autoType1(){
         if(i<text.length){
             head.innerHTML += text.charAt(i);
             i++;
-            setTimeout(autoType,100);
+            setTimeout(autoType1,100);
         }
     }
-    autoType();  //Initial Call to start the typing test
+    function autoType2(){
+        if(j<text2.length){
+            head2.innerHTML += text2.charAt(j);
+            j++;
+            setTimeout(autoType2,100);
+        }
+    }
+    autoType1();
+    autoType2();  //Initial Call to start the typing test
 })
+
+const product = document.querySelector(".item");
+const clothSec = document.querySelector(".cloth-section");
+const itemPic = document.querySelector(".product");
+// const desc = document.querySelector(".des");  //description
+
+const images = [
+    'pic1.jpg', 'pic2.jpg',
+    'pic3.jpg', 'pic4.jpg',
+    'pic5.jpg', 'pic6.jpg',
+    'pic7.jpg', 'pic8.jpg'
+]
+const description = [
+    'pic1.jpg', 'pic2.jpg',
+    'pic3.jpg', 'pic4.jpg',
+    'pic5.jpg', 'pic6.jpg',
+    'pic7.jpg', 'pic8.jpg'
+]
+for(let i=1; i<=images.length; i++){
+    const flexItem = document.createElement('div');
+    flexItem.classList.add('product');
+
+    const image = document.createElement('img');
+    image.src = images[i];
+    image.classList.add('itemPic');
+    flexItem.appendChild(image);
+
+    const descrip = document.createElement('p');
+    descrip.innerHTML = description[i];
+    // descrip.classList.add('itemPic');
+    flexItem.appendChild(descrip);
+    clothSec.append(flexItem);
+}
