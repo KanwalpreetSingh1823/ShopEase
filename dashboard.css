@@ -42,7 +42,7 @@ a{
 }
 #user-info i{
     color:azure;
-    padding-left: 8rem;
+    padding-left: 7rem;
     font-size: 1.4rem;
 }
 .search-bar i{
@@ -60,38 +60,26 @@ a{
 .cart{
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-left: 2.5rem;
+    position: relative;
+    margin-top: 5px;
 }
 .cart #cart-add{
     color:azure;
     font-size: 1.2rem;
 }
 .product-slides{
-    /* background-color:rgb(236, 236, 236); */
-    /* border:1px solid green; */
     display: flex;
     align-items: center;
     height:25rem;
     gap:17rem;
-    /* flex-shrink: 2; */
-    /* background-color:black; */
 }
-/* .slide-1 img{
-    width:100rem;
-}
-.slide-2 img{
-    width:100rem;
-    height:26.5rem;
-} */
 .fade{
     display: none;
 }
 .mySlides{
     display: flex;
     margin-top: 4rem;
-    /* align-items: center;
-    justify-content: center; */
 }
 
 .display-image{
@@ -101,15 +89,12 @@ a{
 .text-write{
     margin-left: 1rem;
     width: 35rem;
-    /* border: 1px solid black;
-    flex-wrap: nowrap; */
 }
 .slides{
     display: flex;
     align-items: center;
     justify-content: center;
     width:25rem;
-    /* border:1px solid red; */
 }
 
 
@@ -120,21 +105,57 @@ a{
 
 .cloth-section{
     margin-top: 1rem;
-    /* border:1px solid black; */
     display: flex;
     justify-content: center;
     gap:3rem;
     padding: 0 1rem 0 1rem;
     flex-wrap: wrap;
 }
-.cloth-section .item{
-    /* border:1px solid red; */
+.item{
     height:25rem;
     width:16rem;
     overflow: hidden;
     box-shadow:5px 5px 5px grey;
 }
-.cloth-section .product{
+.product{
     height:15rem;
     width:16rem;
+}
+
+/*Description of items*/
+.disc{
+    margin-left: 1.2rem;
+    margin-top: 2rem;
+    color:blue;
+    font-size: 1.2rem;
+}
+
+.desc2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+    margin-top: 2rem;
+}
+
+.price{
+    color:blue;
+    font-size: 1.4rem;
+}
+.select-item{
+    color:black;
+    font-size: 1.3rem;
+}
+
+.item-count{
+    color:azure;
+    background-color: red;
+    width:1rem;
+    height:1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: absolute;
+    top:-2px;
 }
