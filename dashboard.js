@@ -50,11 +50,12 @@ const images = [
 ]
 
 const proPrice = [
-    'price = ₹599', 'price = ₹599',
-    'price = ₹599', 'price = ₹599',
-    'price = ₹599', 'price = ₹599',
-    'price = ₹599', 'price = ₹599'
+    'price = ₹199', 'price = ₹299',
+    'price = ₹399', 'price = ₹499',
+    'price = ₹599', 'price = ₹699',
+    'price = ₹799', 'price = ₹899',
 ]
+
 const proDescription = [
     'This is the description of product', 'This is the description of product',
     'This is the description of product', 'This is the description of product',
@@ -92,21 +93,34 @@ for(let i=0; i<images.length; i++){
     flexItem.appendChild(descr2);
 
     clothSec.append(flexItem);
-
-
 }
 
+
+function showPrompt(){
+    const prompt = document.querySelector(".prompt");
+    prompt.style.display = 'block';
+    setTimeout(()=>{
+        prompt.style.display = 'none';
+    },1000);
+}
+
+
 let count = 0;   //Item-count
-const selected_item = document.querySelectorAll(".select-item");
+let selected_item = document.querySelectorAll(".select-item");
 let itemCount = document.querySelector(".item-count");
 itemCount.innerHTML = count;
 selected_item.forEach((val) => {
    val.addEventListener("click",()=>{
     if(val.classList.contains('fa-regular')){
+        showPrompt();
         val.classList.add('fa-solid');
         val.classList.remove('fa-regular');
         val.style.color = "red";
         count++;
+
+        setTimeout(()=>{
+            val.style.visibility= "hidden";
+        },500)
        }
     else if(val.classList.contains('fa-solid')){
         val.classList.remove('fa-solid');
@@ -117,3 +131,64 @@ selected_item.forEach((val) => {
        itemCount.innerHTML = count;
    })
 });
+
+
+const cartDisplay = document.querySelector("#cart-add");
+const cartBoxDisplay = document.querySelector(".cartBox");
+cartDisplay.addEventListener("click",()=>{
+    if(cartBoxDisplay.style.display === 'block'){
+        cartBoxDisplay.style.display = 'none';
+    }
+    else{
+        cartBoxDisplay.style.display = 'block';
+    }
+})
+
+const entireBody = document.querySelector('body');
+const showLoader = () => {
+    entireBody.style.backgroundColor = "white";
+    document.querySelector(".product-slides").style.display = 'none';
+    document.querySelector(".cloth-section").style.display = 'none';
+    document.querySelector(".spin").style.display = 'flex';
+    setTimeout(()=>{
+        window.location.href = 'profile.html';
+    },2000);
+}
+
+const myAccount = document.querySelector(".userDetails");
+myAccount.addEventListener("click",()=>{
+    showLoader();
+})
+
+
+/* Accessing the particular decription and price */
+
+const allItems = document.querySelector(".cloth-section");
+allItems.addEventListener("click",(event)=>{
+    if(event.target.classList.contains('select-item')){
+        const item = event.target.closest('.item');
+        const description1 = item.querySelector('.disc').textContent;
+        const description2 = item.querySelector('.desc2').textContent;
+        const createItemDiv = document.createElement('div');
+        const createItem = document.createElement('li');
+        const removeBtn = document.createElement('button');
+        createItemDiv.classList.add('cartItemSection');
+        createItem.innerHTML = `Item price ${description2} has been added`;
+        removeBtn.innerHTML = "remove";
+        removeBtn.classList.add('removeButton');
+        createItemDiv.append(createItem);
+        createItemDiv.append(removeBtn);
+        cartBoxDisplay.append(createItemDiv);
+        removeBtn.addEventListener("click",()=>{
+            cartBoxDisplay.removeChild(createItemDiv);
+            if(event.target.classList.contains('fa-solid')){
+                event.target.style.visibility = "visible";
+                event.target.classList.remove('fa-solid');
+                event.target.classList.add('fa-regular');
+                event.target.style.color = "black";
+                count --;
+                itemCount.innerHTML = count;
+            }
+        })
+    }
+})

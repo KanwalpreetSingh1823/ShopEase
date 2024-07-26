@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navBar">
+    <div class="navBar" style="width: 100vw;">
         <nav class="navbar">
             <div class="main-logo">
                 <a href="dashboard.html" id="logo">ShopEase</a>
@@ -27,11 +27,12 @@
                 <div class="item-count">
                     0
                 </div>
-                <a href="#" id="cart-add"><i class="fa-solid fa-cart-shopping"></i></a>
+                <!-- <a href="#" id="cart-add"><i class="fa-solid fa-cart-shopping"></i></a> -->
+                <div id="cart-add"><i class="fa-solid fa-cart-shopping"></i></div>
                 
             </div>
             <div class="userDetails">
-                <a href="#" id="user-info"><i class="fa-solid fa-user"></i></a>
+                <i class="fa-solid fa-user"></i>
             </div>
         </nav>
     </div>
@@ -70,12 +71,36 @@
             </div>
         </div>
     </div>
+
+
+    <div class="prompt">
+        <p>Item added to cart</p>
+    </div>
     <!-- <hr> -->
     <div class="cloth-section">
         <!-- <div class="item">
             <img src="pic1.jpg" class="product" alt="product" >
             <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, accusamus!</p>
        </div> -->
+    </div>
+
+
+
+    <br><br><br>
+    <div class="cartBox">
+        <h1 id="cartHeading">Cart Section</h1>
+        <hr>
+        <ul>
+            <!-- <li>Item1</li>
+            <li>Item1</li>
+            <li>Item1</li>
+            <li>Item1</li> -->
+        </ul>
+    </div>
+
+
+    <div class="loader">
+        <div class="spin"></div>
     </div>
     <script src="dashboard.js"></script>
 </body>

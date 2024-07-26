@@ -36,9 +36,21 @@ Form.addEventListener("submit",(event)=>{
         event.preventDefault();
     }
     else{
-        showLoader();
+        login();
     }
 });
+
+
+function login(){
+    const user = userName.value;
+    const pass = pwd.value;
+    const mail = email.value;
+
+    localStorage.setItem('username',user);
+    localStorage.setItem('password',pass);
+    localStorage.setItem('email',mail);
+    showLoader();
+}
 
 const showLoader = () => {
     body.style.backgroundColor = "white";
