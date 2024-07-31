@@ -46,7 +46,11 @@ const images = [
     'pic1.jpg', 'pic2.jpg',
     'pic3.jpg', 'pic4.jpg',
     'pic5.jpg', 'pic6.jpg',
-    'pic7.jpg', 'pic8.jpg'
+    'pic7.jpg', 'pic8.jpg',
+    'shoe1.jpg', 'shoe2.jpg',
+    'shoe3.jpg', 'shoe4.jpg',
+    'shoe5.jpg', 'shoe6.jpg',
+    'shoe7.jpg', 'shoe8.jpg',
 ]
 
 const proPrice = [
@@ -54,15 +58,32 @@ const proPrice = [
     'price = ₹399', 'price = ₹499',
     'price = ₹599', 'price = ₹699',
     'price = ₹799', 'price = ₹899',
+    'price = ₹999', 'price = ₹169',
+    'price = ₹269', 'price = ₹369',
+    'price = ₹469', 'price = ₹569',
+    'price = ₹769', 'price = ₹869',
 ]
 
 const proDescription = [
-    'This is the description of product', 'This is the description of product',
-    'This is the description of product', 'This is the description of product',
-    'This is the description of product', 'This is the description of product',
-    'This is the description of product', 'This is the description of product'
+    'Cozy sweatshirt made from a soft cotton blend.',
+    'Cozy sweatshirt perfect for keeping warm on chilly days.',
+    'Lightweight and airy summer dress with a floral print.', 
+    'Cozy sweatshirt made from a soft cotton blend.',
+    'This is the description of product', 
+    'Trendy crossbody bag with an adjustable strap.',
+    'Elegant satchel bag crafted from premium leather.', 
+    'Trendy crossbody bag with an adjustable strap.',
+    'Elegant formal shoes crafted from premium leather.', 
+    'Rugged and durable boots designed for outdoor.',
+    'High-performance running shoes designed for comfort.', 
+    'Elegant formal shoes crafted from premium leather.',
+    'Rugged and durable boots designed for outdoor.', 
+    'High-performance running shoes designed for comfort.',
+    'Rugged and durable boots designed for outdoor.', 
+    'High-performance running shoes designed for comfort.'
 ]
 
+const mainBody = document.querySelector('body');
 for(let i=0; i<images.length; i++){
     const flexItem = document.createElement('div');
     flexItem.classList.add('item');
@@ -93,6 +114,12 @@ for(let i=0; i<images.length; i++){
     flexItem.appendChild(descr2);
 
     clothSec.append(flexItem);
+
+    if(i==7){
+        const innerLine = document.createElement('div');
+        innerLine.innerHTML = "Hello World";
+
+    }
 }
 
 
@@ -149,6 +176,7 @@ const showLoader = () => {
     entireBody.style.backgroundColor = "white";
     document.querySelector(".product-slides").style.display = 'none';
     document.querySelector(".cloth-section").style.display = 'none';
+    document.querySelector("footer").style.display = 'none';
     document.querySelector(".spin").style.display = 'flex';
     setTimeout(()=>{
         window.location.href = 'profile.html';
@@ -173,14 +201,18 @@ allItems.addEventListener("click",(event)=>{
         const createItem = document.createElement('li');
         const removeBtn = document.createElement('button');
         createItemDiv.classList.add('cartItemSection');
-        createItem.innerHTML = `Item price ${description2} has been added`;
+        createItem.innerHTML = `${description1}Item price ${description2} has been added`;
+        createItem.classList.add("cartItems");
         removeBtn.innerHTML = "remove";
         removeBtn.classList.add('removeButton');
+        
+
         createItemDiv.append(createItem);
         createItemDiv.append(removeBtn);
         cartBoxDisplay.append(createItemDiv);
         removeBtn.addEventListener("click",()=>{
             cartBoxDisplay.removeChild(createItemDiv);
+            createItem.classList.add('removeItem');
             if(event.target.classList.contains('fa-solid')){
                 event.target.style.visibility = "visible";
                 event.target.classList.remove('fa-solid');

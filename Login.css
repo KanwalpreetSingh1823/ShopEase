@@ -4,20 +4,24 @@
 }
 body{
     background-color: rgb(218, 218, 219);
+    background: url("https://media.istockphoto.com/id/2061836383/photo/items-purchased-through-online-shopping-are-delivered-3d-rendering.jpg?s=2048x2048&w=is&k=20&c=Pey21fVfznv5h-gy05gj9Lx20LJV9X5QOEWLLw5EowQ=");
+    background-repeat: no-repeat;
+    background-position:left;
+    background-size: cover;
 }
 .container{
     display: flex;
     /* border:1px solid black; */
     justify-content: center;
-    margin:15vh 25vw 20vh 25vw;
+    margin:15vh 0vw 20vh 52vw;
     padding:10px;
-    height:30rem;
+    height:31rem;
     padding-bottom: 0;
 }
 .login{
     background-color: white;
     /* border:1px solid red; */
-    width:25rem;
+    width:27rem;
     border-radius: 10px;
 }
 .login #sign-in{
@@ -54,6 +58,12 @@ fieldset input{
     outline:none;
     font-size:1rem;
 }
+
+#forgot-pass{
+    text-align: end;
+    color:red;
+}
+
 #submit-button{
     width:10rem;
     height:2.5rem;
@@ -67,6 +77,13 @@ fieldset input{
     font-weight: bold;
     margin-top: 0;
 }
+#submit-button:hover{
+    cursor: pointer;
+    font-size: 1.1rem;
+    height: 2.6rem;
+    width:10.5rem;
+}
+
 .hr-container {
     display: flex;
     align-items: center;
@@ -100,7 +117,7 @@ fieldset input{
     justify-content: center;
 }
 .loader .spin{
-    border-top:2px solid red;
+    border-top:2px solid black;
     display: none;
     height:80px;
     width:80px;
@@ -139,3 +156,7 @@ fieldset input{
 .display2{
     display:none;
 } */
+
+.hide{
+    display:none;
+}

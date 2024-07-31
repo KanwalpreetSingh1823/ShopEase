@@ -40,6 +40,16 @@ Form.addEventListener("submit",(event)=>{
     }
 });
 
+// const loginForm = document.querySelector(".login");
+// function forgotPass(){
+//     const forgotPass = document.querySelector("#forgot-pass");
+//     forgotPass.addEventListener("click",()=>{
+//         if(loginForm.classList.contains('hide')){
+//             loginForm.classList.remove('hide');
+//         }
+//     })
+// }
+
 
 function login(){
     const user = userName.value;
@@ -53,6 +63,7 @@ function login(){
 }
 
 const showLoader = () => {
+    body.style.backgroundImage = "none";
     body.style.backgroundColor = "white";
     document.querySelector(".container").style.display = 'none';
     document.querySelector(".spin").style.display = 'flex';
