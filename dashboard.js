@@ -113,14 +113,30 @@ for(let i=0; i<images.length; i++){
     flexItem.appendChild(descrip);
     flexItem.appendChild(descr2);
 
+
+
     clothSec.append(flexItem);
 
-    if(i==7){
-        const innerLine = document.createElement('div');
-        innerLine.innerHTML = "Hello World";
-
-    }
 }
+const bodyFooter = document.querySelector('footer');
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const itemContainer = document.querySelector('.cloth-section');
+    const newContainer = itemContainer.cloneNode(true);
+    const items = newContainer.querySelectorAll('.item');
+    const noOfItemsToKeep = 8;
+    for(let i=items.length-1; i>=noOfItemsToKeep; i--){
+        items[i].remove();
+    }
+    bodyFooter.parentNode.insertBefore(newContainer,bodyFooter);
+});
+
+const closeCart = document.querySelector('.closeCartBox');
+closeCart.addEventListener("click",()=>{
+    cartBoxDisplay.style.display = 'none';
+})
+
 
 
 function showPrompt(){
@@ -130,7 +146,6 @@ function showPrompt(){
         prompt.style.display = 'none';
     },1000);
 }
-
 
 let count = 0;   //Item-count
 let selected_item = document.querySelectorAll(".select-item");
@@ -168,6 +183,7 @@ cartDisplay.addEventListener("click",()=>{
     }
     else{
         cartBoxDisplay.style.display = 'block';
+        cartBoxDisplay.classList.add('cartBoxAnimation');
     }
 })
 
@@ -201,7 +217,7 @@ allItems.addEventListener("click",(event)=>{
         const createItem = document.createElement('li');
         const removeBtn = document.createElement('button');
         createItemDiv.classList.add('cartItemSection');
-        createItem.innerHTML = `${description1}Item price ${description2} has been added`;
+        createItem.innerHTML = `<br>${description1} <br> ${description2}`;
         createItem.classList.add("cartItems");
         removeBtn.innerHTML = "remove";
         removeBtn.classList.add('removeButton');
@@ -224,3 +240,14 @@ allItems.addEventListener("click",(event)=>{
         })
     }
 })
+
+
+document.addEventListener('scroll', function() {
+    const animatedText = document.getElementById('animatedText');
+    const textPosition = animatedText.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight;
+
+    if (textPosition < screenPosition) {
+        animatedText.classList.add('scrolled');
+    }
+});
