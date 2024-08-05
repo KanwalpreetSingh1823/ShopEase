@@ -213,16 +213,17 @@ allItems.addEventListener("click",(event)=>{
         const item = event.target.closest('.item');
         const description1 = item.querySelector('.disc').textContent;
         const description2 = item.querySelector('.desc2').textContent;
+        const productImage = item.querySelector('.product').src;
+        // productImage.classList.add('imageInCart');
         const createItemDiv = document.createElement('div');
         const createItem = document.createElement('li');
         const removeBtn = document.createElement('button');
         createItemDiv.classList.add('cartItemSection');
-        createItem.innerHTML = `<br>${description1} <br> ${description2}`;
-        createItem.classList.add("cartItems");
+        createItem.innerHTML = `<img src="${productImage}" style="height:5rem; width:15rem alt = "Product-image"><br>${description1} <br> ${description2}`;
+        createItem.classList.add('cartItems');
         removeBtn.innerHTML = "remove";
         removeBtn.classList.add('removeButton');
         
-
         createItemDiv.append(createItem);
         createItemDiv.append(removeBtn);
         cartBoxDisplay.append(createItemDiv);

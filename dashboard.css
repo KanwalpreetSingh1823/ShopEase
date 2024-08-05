@@ -78,7 +78,7 @@ a{
 
 .bodyText{
     font-weight: bold;
-    color: blue;
+    color: black;
     text-align: center;
     margin-bottom: 6rem;
     margin-top: 4rem;
@@ -336,7 +336,7 @@ a{
 .cartItemSection{
     background-color: white;
     box-shadow: 0 5px 8px rgba(0,0,0,0.8);
-    height:5rem;
+    height:8rem;
     padding-top: 1rem;
     background-color: white;
     display: flex;
@@ -347,6 +347,11 @@ a{
 
 .cartItems{
     margin-left: 1rem;
+}
+
+.imageInCart{
+    width:2rem;
+    height:2rem;
 }
 
 .removeButton{
@@ -541,3 +546,29 @@ hr{
     background-color: rgb(255, 249, 249);
     cursor:pointer;
  }
+
+
+/*  Offer Div Section  */
+.offer{
+    display: flex;
+    background-color: white;
+    /* height:10rem; */
+    flex-wrap: wrap;
+    margin:2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.offerItems{
+    background-color: white;
+    height:20rem;
+    width:20rem;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+}
+#latestOffer{
+    width:95vw;
+   margin:10px 20px 10px 20px;
+   border-radius: 10px;
+}
