@@ -40,6 +40,15 @@ document.addEventListener("DOMContentLoaded",()=>{
     autoType(); //Initial Call to start the typing test
 })
 
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".items");
+
+hamburger.addEventListener("click",()=>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
+
+
 const clothSec = document.querySelector(".cloth-section");
 
 const images = [
@@ -54,14 +63,14 @@ const images = [
 ]
 
 const proPrice = [
-    'price = ₹199', 'price = ₹299',
-    'price = ₹399', 'price = ₹499',
-    'price = ₹599', 'price = ₹699',
-    'price = ₹799', 'price = ₹899',
-    'price = ₹999', 'price = ₹169',
-    'price = ₹269', 'price = ₹369',
-    'price = ₹469', 'price = ₹569',
-    'price = ₹769', 'price = ₹869',
+    '₹199', '₹299',
+    '₹399', '₹499',
+    '₹599', '₹699',
+    '₹799', '₹899',
+    '₹999', '₹169',
+    '₹269', '₹369',
+    '₹469', '₹569',
+    '₹769', '₹869',
 ]
 
 const proDescription = [
@@ -118,26 +127,12 @@ for(let i=0; i<images.length; i++){
     clothSec.append(flexItem);
 
 }
+
 const bodyFooter = document.querySelector('footer');
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const itemContainer = document.querySelector('.cloth-section');
-    const newContainer = itemContainer.cloneNode(true);
-    const items = newContainer.querySelectorAll('.item');
-    const noOfItemsToKeep = 8;
-    for(let i=items.length-1; i>=noOfItemsToKeep; i--){
-        items[i].remove();
-    }
-    bodyFooter.parentNode.insertBefore(newContainer,bodyFooter);
-});
-
 const closeCart = document.querySelector('.closeCartBox');
 closeCart.addEventListener("click",()=>{
     cartBoxDisplay.style.display = 'none';
 })
-
-
 
 function showPrompt(){
     const prompt = document.querySelector(".prompt");
@@ -174,7 +169,6 @@ selected_item.forEach((val) => {
    })
 });
 
-
 const cartDisplay = document.querySelector("#cart-add");
 const cartBoxDisplay = document.querySelector(".cartBox");
 cartDisplay.addEventListener("click",()=>{
@@ -187,12 +181,13 @@ cartDisplay.addEventListener("click",()=>{
     }
 })
 
-const entireBody = document.querySelector('body');
+const contentElements = document.querySelectorAll('.content');
 const showLoader = () => {
-    entireBody.style.backgroundColor = "white";
-    document.querySelector(".product-slides").style.display = 'none';
-    document.querySelector(".cloth-section").style.display = 'none';
-    document.querySelector("footer").style.display = 'none';
+    contentElements.forEach((element) => {
+        element.style.display = 'none';
+      });
+    // removeDynamicItems.classList.add('dynamically');
+    // console.log('dynamic run');
     document.querySelector(".spin").style.display = 'flex';
     setTimeout(()=>{
         window.location.href = 'profile.html';
@@ -204,8 +199,20 @@ myAccount.addEventListener("click",()=>{
     showLoader();
 })
 
-
 /* Accessing the particular decription and price */
+let finalPrice = 0.00;
+const totalPriceOfItems = document.querySelector('.priceDisplay');
+function totalPrice(x){
+    x = parseFloat(x.replace('₹', ''));
+    finalPrice += x;
+    totalPriceOfItems.innerHTML = `₹${finalPrice}`;
+}
+
+function totalPriceUpdated(y){
+    y = parseFloat(y.replace('₹', ''));
+    finalPrice -= y;
+    totalPriceOfItems.innerHTML = `₹${finalPrice}`;
+}
 
 const allItems = document.querySelector(".cloth-section");
 allItems.addEventListener("click",(event)=>{
@@ -215,6 +222,12 @@ allItems.addEventListener("click",(event)=>{
         const description2 = item.querySelector('.desc2').textContent;
         const productImage = item.querySelector('.product').src;
         // productImage.classList.add('imageInCart');
+
+        // const totalPrice = document.querySelector('.priceDisplay');
+        // totalPrice.innerHTML = `${description2}`;
+        console.log(parseFloat(description2));
+        totalPrice(description2);
+
         const createItemDiv = document.createElement('div');
         const createItem = document.createElement('li');
         const removeBtn = document.createElement('button');
@@ -229,6 +242,7 @@ allItems.addEventListener("click",(event)=>{
         cartBoxDisplay.append(createItemDiv);
         removeBtn.addEventListener("click",()=>{
             cartBoxDisplay.removeChild(createItemDiv);
+            totalPriceUpdated(description2);
             createItem.classList.add('removeItem');
             if(event.target.classList.contains('fa-solid')){
                 event.target.style.visibility = "visible";
@@ -252,3 +266,29 @@ document.addEventListener('scroll', function() {
         animatedText.classList.add('scrolled');
     }
 });
+
+// function generateItems() {
+//     const clothSection = document.querySelector('.cloth-section');
+//     clothSection.innerHTML = ''; // Clear the section before regenerating items
+
+//     for (let i = 0; i < 10; i++) {
+//         const item = document.createElement('div');
+//         item.classList.add('item');
+//         item.innerText = `Item ${i + 1}`;
+//         clothSection.appendChild(item);
+//     }
+// }
+
+// Call this function whenever you want to refresh the items
+
+document.addEventListener('scroll',()=>{
+    const images = document.querySelectorAll('.offerItems');
+    // const imgPosition = images.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+    images.forEach(image=>{
+       const imgPosition = image.getBoundingClientRect().top;
+       if(imgPosition < screenPos){
+        image.classList.add('scrolling');
+    }
+    })
+})

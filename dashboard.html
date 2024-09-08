@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <div class="navBar" style="width: 100vw;">
+    <div class="navBar content" style="width: 100vw;">
         <nav class="navbar">
             <div class="main-logo">
-                <a href="dashboard.html" id="logo">ShopEase</a>
+                <a href="dashboard.html" id="logo"><span id="shopEase">ShopEase</span></a>
             </div>
             <ul class="items">
-                <a href="#"><li>Men</li></a>
-                <a href="#"><li>Women</li></a>
-                <a href="#"><li>Electronics</li></a>
-                <a href="#"><li>Home & garden</li></a>
+                <a href="#"><li class="nav-item">Men</li></a>
+                <a href="#"><li class="nav-item">Women</li></a>
+                <a href="#"><li class="nav-item">Electronics</li></a>
+                <a href="#"><li class="nav-item">Home & garden</li></a>
             </ul>
             <div class="search-bar">
-                <input type="text" id="search" placeholder="Search...">
+                <input type="text" id="search" placeholder="Search for Products, Brands and More..">
             </div>
             <div class="cart">
                 <div class="item-count">
@@ -34,10 +39,15 @@
             <div class="userDetails">
                 <i class="fa-solid fa-user"></i>
             </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </div>
 
-    <div class="product-slides">
+    <div class="product-slides content">
         <div class="text-write"><h1 class="main-head">Welcome to ShopEase </h1><br>
             <span id="discover"> Discover a World of Quality and Style at ShopEase. </span><br><br>
             <p id="about-section">We believe in offering only the best to our customers. Explore our wide range of products that cater to all your needs, from the latest fashion trends to top-notch electronics, home essentials, and more. Our curated collection is designed to bring you exceptional quality, great value, and an unmatched shopping experience.</p></div>
@@ -52,7 +62,7 @@
                 <img src="shoe1.jpg" class="display-image" alt="product">
             </div>
             <div class="mySlides">
-                <img src="pic5.jpg" class="display-image" alt="product">
+                <img src="pic11.jpg" class="display-image" alt="product">
             </div>
             <div class="mySlides">
                 <img src="shoe8.jpg" class="display-image" alt="product">
@@ -85,11 +95,11 @@
     </div>
 
 
-    <div class="prompt">
+    <div class="prompt content">
         <p>Item added to cart</p>
     </div>
     <!-- <hr> -->
-    <div class="cloth-section">
+    <div class="cloth-section content">
         <!-- <div class="item">
             <img src="pic1.jpg" class="product" alt="product" >
             <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, accusamus!</p>
@@ -97,12 +107,11 @@
     </div>
 
 
-
     <br><br><br>
-    <div class="cartBox">
+    <div class="cartBox content">
         <div class="cartTop">
-            <h1 id="cartHeading">Cart Section</h1>
-            <p class="closeCartBox"><i class="fa-solid fa-x" style="cursor: pointer;"></i></p>
+            <h1 id="cartHeading">My Cart</h1>
+            <p class="closeCartBox"><i class="fa-solid fa-x" style="cursor: pointer; margin-right: 1rem;"></i></p>
         </div>
         <hr>
         <ul>
@@ -111,10 +120,18 @@
             <li>Item1</li>
             <li>Item1</li> -->
         </ul>
+        <div class="footerPrice">
+            <div class="priceDisplay">
+                ₹00.0
+            </div>
+            <div class="buy">
+                <button>Buy</button>
+            </div>
+        </div>
     </div>
 
 
-    <div class="bodyText">
+    <div class="bodyText content">
         <p id="animatedText">
             <span class="upper">Discover the latest deals </span>
             <span class="lower">and discounts on your favorite products!</span>
@@ -126,16 +143,62 @@
         <div id="item2" class="offerItems">Offer 2</div>
         <div id="item3" class="offerItems">Offer 2</div>
     </div> -->
-    <div class="offerImage">
+    <div class="offerImage content">
         <img src="offerPhone.png" id="latestOffer"alt="Offer">
     </div>
+    <br>
+    <!-- <div class="services">
+        <hr>
+        <h1 id="Services">Our Services</h1>
+        <hr>
+    </div> -->
+    <div class="hr-container content">
+        <hr>
+        <span><h1 id="Services">Our Services</h1></span>
+        <hr>
+    </div>
+     <div class="offer content">
+        <div id="left" class="offerItems">
+            <h1 class="service_title">Fast and Reliable Shipping</h1>
+            <p class="service_desc"> Enjoy fast and reliable shipping with our trusted delivery partners. We ensure that your orders reach you on time, every time. Track your shipment easily through our website and get real-time updates.</p>
+            <div class="service_img">
+                <img src="fast-shipping.jpg" alt="">
+            </div>
+        </div>
 
-     <div class="offer">
-        <div id="item1" class="offerItems"><img src="watch1.jpg" style="height:20rem; width:20rem"alt=""></div>
-        <div id="item2" class="offerItems"><img src="watch1.jpg" style="height:20rem; width:20rem"alt=""></div>
-        <div id="item3" class="offerItems"><img src="watch1.jpg" style="height:20rem; width:20rem"alt=""></div>
+        <div id="item2" class="offerItems">
+            <h1 class="service_title">24/7 Customer Support</h1>
+
+            <p class="service_desc"> Our dedicated customer support team is available 24/7 to assist you with any queries or issues. Whether you need help with your order or have questions about our products, we're here to help!</p>
+            <div class="service_img">
+                <img src="fast-shipping-24x7-2.jpg" alt="">
+            </div>
+        </div>
+
+        <div id="right" class="offerItems">
+            <h1 class="service_title">Easy Returns and Exchanges</h1>
+            <p class="service_desc"> We offer a hassle-free returns and exchanges policy. If you're not satisfied with your purchase, you can easily return or exchange it within our period. Shop with confidence knowing you have flexible options.</p>
+            <div class="service_img">
+                <img src="fast-shipping-24x7.jpg" alt="">
+            </div>
+        </div>
     </div>
 
+
+    <!-- /*<div class="cardItems">
+        
+        <div class="card"> -->
+         <!-- <div class="cardImg">
+            <img src="pic1.jpg" alt="">
+         </div> -->
+         <!-- <img src="pic1.jpg" class="cardImg" alt="">
+         <div class="description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, itaque?
+         </div>
+         <div class="cardPrice"></div>
+        </div>
+        
+    </div> -->
     <!-- <footer>
         <div class="footer-top">
             <div class="company-info">
@@ -198,8 +261,15 @@
             </div>
         </div>
     </footer> -->
-
-    <footer>
+    <!-- <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div> -->
+    <footer class="content">
         <div class="footerTop">
             <div class="companyInfo">
                 <h1>About Us</h1>
@@ -230,9 +300,11 @@
                 </ul>
             </div>
             <div class="news">
-                <h1>Stay Updated</h1>
+                <div class="updated">
+                    <h1>Stay Updated</h1>
                 <p>Subscribe to our newsletter for the latest updates and special offers.</p>
-                <form action="#">
+                </div>
+                <form action="#" id="subscribe_Form">
                     <input type="email" placeholder="Enter your email.." id="footerMail">
                     <button id="subscribeBtn">Subscribe</button>
                 </form>
@@ -241,15 +313,14 @@
         <hr>
         <div class="footerBottom">
             <div class="copyright">
-                <p>&copy; 2024 ShopEase. All rights reserved.</p>
+                <p>&copy; 2024 ShopEase. All rights reserved || Made by Kanwalpreet Singh.</p>
             </div>
         </div>
     </footer>
-    
-
     <div class="loader">
         <div class="spin"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="dashboard.js"></script>
 </body>
 </html>

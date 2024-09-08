@@ -3,14 +3,92 @@
     padding:0;
 }
 body{
-    background-color: rgb(238, 238, 243);
+    background-color: rgb(242, 242, 247);
 }
+.navbar{
+    background-color: black;
+    display: flex;
+    height:3rem;
+    position:fixed;
+    width:100vw;
+    z-index: 1000;
+    top:0;
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color:azure;
+    margin-left:2rem;
+    width:30rem;
+}
+.items li{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    font-size: 1rem;
+    color:azure;
+}
+a{
+    text-decoration: none;
+}
+.search-bar{
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+}
+.search-bar input{
+   padding-left: 0.5rem;
+}
+#search{
+    width:25rem;
+    height:1.7rem;
+}
+.userDetails{
+    width:6rem;
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+.userDetails i{
+    color:azure;
+    padding-left: 1rem;
+    font-size: 1.4rem;
+}
+
+.search-bar i{
+    color:azure;
+    margin-right: 3.1rem;
+}
+#logo{
+    color:azure;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    margin-left: 0.5rem;
+    line-height: 2.2rem;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    margin-left: 2.5rem;
+    position: relative;
+    margin-top: 5px;
+}
+.cart #cart-add i{
+    color:azure;
+    font-size: 1.2rem;
+}
+
+
 .container{
     background-color: white;
     opacity: 1;
     height:40vw;
     width:45vw;
-    margin:50px 100px 50px 350px;
+    margin:60px 100px 50px 350px;
     border-radius: 1rem;
     box-shadow:
     0 0 0 2px white,
@@ -20,7 +98,7 @@ body{
     border:1px solid red;
 }
 #my-account{
-    color:blue;
+    color:black;
     margin-left: 20px;
     padding-bottom: 3rem;
     padding-top: 1rem;
@@ -35,3 +113,7 @@ label{
     font-size: 1.2rem;
 }
 
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+}

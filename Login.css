@@ -52,7 +52,7 @@ fieldset legend{
     margin-left: 5px;
 }
 fieldset input{
-    width: 25vw;
+    width: 22rem;
     margin-left: 10px;
     margin-top: 2px;
     height:3vh;
@@ -73,10 +73,9 @@ fieldset input{
 }
 
 #submit-button{
-    width:10rem;
+    width:22rem;
     height:2.5rem;
     border:none;
-    border-radius: 10px;
     border-color: white;
     background-color: black;
     opacity: 0.8;
@@ -89,7 +88,6 @@ fieldset input{
     cursor: pointer;
     font-size: 1.1rem;
     height: 2.6rem;
-    width:10.5rem;
 }
 
 .hr-container {
@@ -167,4 +165,10 @@ fieldset input{
 
 .hide{
     display:none;
+}
+
+.mainSection{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
