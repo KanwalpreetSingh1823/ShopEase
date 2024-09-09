@@ -172,3 +172,63 @@ fieldset input{
     align-items: center;
     justify-content: space-evenly;
 }
+
+/*-------------------Responsiveness------------------------*/
+
+@media (max-width:768px){
+    .login{
+        margin-right: 5rem;
+        width:30rem;
+    }
+    fieldset{
+        margin: 0 1rem 0 1rem;
+    }
+}
+@media (max-width:425px){
+    .login{
+        margin-right: 52vw;
+        width:30rem;
+    }
+    .loader{
+        top:40vh;
+        left:40vw;
+    }
+    .loader .spin{
+        height:70px;
+        width:70px;
+    }
+}
+@media (max-width:375px){
+    .login{
+        /* margin-right: 52vw; */
+        width:22rem;
+    }
+    fieldset input{
+        width:75vw;
+    }
+    #submit-button{
+        width:70vw;
+    }
+    .error{
+        margin-left:0;
+        margin-right: 5px;
+        margin-top: 13px;
+    }
+    .loader{
+        top:40vh;
+        left:45vw;
+    }
+    .loader .spin{
+        height:50px;
+        width:50px;
+    }
+}
+@media (max-width:320px){
+    .login-Option{
+        gap:4rem;
+    }
+    .loader{
+        top:40vh;
+        left:43vw;
+    }
+}

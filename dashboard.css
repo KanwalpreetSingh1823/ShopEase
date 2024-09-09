@@ -755,6 +755,10 @@ hr{
         padding:10px;
         font-size: 1.2rem;
     }
+    /* .cartItemSection{
+        height:26vh;
+        width:104vw;
+    } */
     #left{
         transform: translateX(-50%);
     }
@@ -766,6 +770,11 @@ hr{
     }
     .footerTop{
         flex-wrap: wrap;
+    }
+    .footerPrice{
+        position: fixed;
+        margin-top: 71.5vh;
+        width:97vw;
     }
     .news{
         /* background-color: red;; */
@@ -848,6 +857,16 @@ hr{
     .items{
         width:100%;
     }
+    .cartBox{
+        margin-top: 0.7rem;;
+    }
+    /* .cartItems{
+        margin-right: 5px;
+    } */
+     .removeButton{
+        padding: 4px;;
+        margin-right: 1rem;
+     }
     #left{
         transform: translateX(-20%);
     }
@@ -911,6 +930,14 @@ hr{
     .companyInfo p{
         font-size: 1.5rem;
     }
+    .loader{
+        top:40vh;
+        left:40vw;
+    }
+    .loader .spin{
+        height:70px;
+        width:70px;
+    }
  }
 
  @media (max-width:375px){
@@ -931,6 +958,29 @@ hr{
     .product{
         height:12rem;
         width:11rem;
+    }
+    .cartBox{
+       width:100vw;
+       height:99vh;
+    }
+    .cartBox{
+        width:100vw;
+        /* margin-right: 0;; */
+    }
+    .cartItems{
+        width:110vw;
+        /* background-color: green;; */
+        height:5rem;
+    }
+    .cartItemSection{
+        width:93vw;
+        height:9rem;
+    }
+    .footerPrice{
+        margin-top: 74vh;
+    }
+    .footerPrice{
+        width:100vw;
     }
     .cloth-section{
         padding: 0;
@@ -953,15 +1003,24 @@ hr{
     #subscribe_Form{
         margin-right: 6rem;
     }
+    .loader{
+        top:40vh;
+        left:45vw;
+    }
+    .loader .spin{
+        height:50px;
+        width:50px;
+    }
  }
 
  @media (max-width:320px){
     .main-logo #shopEase{
-        font-size: 1.6rem;
+        margin-left: 0;
+        font-size: 1.8rem;
     }
     .product-slides{
-        padding-bottom: 25rem;
-        padding-left: 10px;
+        padding-bottom: 23.5rem;
+        padding-left: 15px;
         margin-right: 0;
     }
     #left{
@@ -990,7 +1049,7 @@ hr{
     .cloth-section{
         padding: 0;
         gap:1.5rem;
-        width:113vw;
+        width:115vw;
     }
     .product{
         height:10rem;
@@ -1027,7 +1086,7 @@ hr{
         margin:1.5rem;
     }
     footer{
-        width:113.5vw;
+        width:116.1vw;
     }
     .companyInfo{
         /* background-color: red;; */
@@ -1081,5 +1140,12 @@ hr{
         margin-top: 81vh;
         height:3rem;
         width:110vw;
+    }
+    #subscribe_Form input{
+        width:14rem;
+    };
+    .loader{
+        top:40vh;
+        left:43vw;
     }
  }
